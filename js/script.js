@@ -8,11 +8,11 @@ var app = new Vue(
     el:'#container',
     data: {
            tasks:[
-           {text: 'Fare la spesa', done: true},
-           {text: 'Cucinare', done: true},
-           {text: 'Apparecchiare la tavola', done: true},
-           {text: 'Sistemare la camera', done: true},
-           {text: 'Pulire il bagno', done: true} 
+           {"text": 'Fare la spesa'},
+           {"text": 'Cucinare'},
+           {"text": 'Apparecchiare la tavola'},
+           {"text": 'Sistemare la camera'},
+           {"text": 'Pulire il bagno'} 
            ]
         },
     }
