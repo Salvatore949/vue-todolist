@@ -7,13 +7,24 @@ var app = new Vue(
     {
     el:'#container',
     data: {
-           tasks:[
-           {"text": 'Fare la spesa'},
-           {"text": 'Cucinare'},
-           {"text": 'Apparecchiare la tavola'},
-           {"text": 'Sistemare la camera'},
-           {"text": 'Pulire il bagno'} 
+           newTask:"",
+           tasks: [
+           {'text': 'Fare la spesa'},
+           {'text': 'Cucinare'},
+           {'text': 'Apparecchiare la tavola'},
+           {'text': 'Sistemare la camera'},
+           {'text': 'Pulire il bagno'} ,
            ]
         },
+        methods: {
+            removeItem(index){
+                this.tasks.splice(index,1);
+            },
+            aggiungiTask(){
+                let oggetto = {'text': this.newTask};
+                this.tasks.push(oggetto);
+                this.newTask = '';
+            }
+        }
     }
-) ;
+);
